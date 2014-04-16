@@ -1,0 +1,336 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pebBletestapp.MainActivity$PlaceholderFragment" >
+    
+     <RelativeLayout
+        android:id="@+id/menu_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bar_title" >
+        
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="17dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/btn_back" />
+
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Test"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+
+             >
+        
+    </RelativeLayout>
+    
+
+    <RelativeLayout
+        android:id="@+id/box1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_bar"
+        android:layout_marginLeft = "5dp"
+        android:layout_marginRight = "5dp" >
+
+        <RelativeLayout
+            android:id="@+id/division_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#8d8c8c" >
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ibeacondetail_SSID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/division_line"
+            android:text="@string/hello_world" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_MacAddr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_SSID"
+            android:text="@string/hello_world" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_UUID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_MacAddr"
+            android:text="@string/hello_world" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_UUID"
+            android:text="@string/hello_world" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Minor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_Major"
+            android:text="@string/hello_world" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_SSID_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/division_line"
+            android:text="SSID" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_MacAddr_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_SSID_Text"
+            android:text="MacAddr" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_UUID_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_MacAddr_Text"
+            android:text="UUID" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Major_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_UUID_Text"
+            android:text="Major" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Minor_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_Major_Text"
+            android:text="Minor" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/box2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft = "5dp"
+        android:layout_marginRight = "5dp"
+        android:layout_below="@+id/box1" >
+
+        <RelativeLayout
+            android:id="@+id/division_line1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#8d8c8c" >
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ibeacondetail_MPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/division_line1"
+            android:text="@string/hello_world" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Rssi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_MPower"
+            android:text="@string/hello_world" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_Rssi"
+            android:text="@string/hello_world" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Proximity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_Distance"
+            android:text="@string/hello_world" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_MPower_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/division_line1"
+            android:text="Measured Power" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Rssi_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_MPower_Text"
+            android:text="RSSI" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Distance_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_Rssi_Text"
+            android:text="Distance" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Proximity_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_Distance_Text"
+            android:text="Proximity" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/box3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft = "5dp"
+        android:layout_marginRight = "5dp"
+        android:layout_below="@+id/box2" >
+
+        <RelativeLayout
+            android:id="@+id/division_line2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#8d8c8c" >
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ibeacondetail_connected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/division_line2"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_TX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_connected"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_TX"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_Interval"
+            android:text="1" />
+
+        <RelativeLayout
+            android:id="@+id/division_line3"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/ibeacondetail_Battery"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#8d8c8c" >
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ibeacondetail_Hardware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/division_line3"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Firmware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ibeacondetail_Hardware"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_connected_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/division_line2"
+            android:text="Connected" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_TX_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_connected_Text"
+            android:text="TX Power" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Interval_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_TX_Text"
+            android:text="Interval" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Battery_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_Interval_Text"
+            android:text="Battery Level" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Hardware_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/division_line3"
+            android:text="Hardware Version" />
+
+        <TextView
+            android:id="@+id/ibeacondetail_Firmware_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibeacondetail_Hardware_Text"
+            android:text="Firmware Version" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_Connect"
+        android:layout_width="629px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_login"
+        android:layout_marginBottom="30dp"
+        android:text="connect"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
