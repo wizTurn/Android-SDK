@@ -1,0 +1,3 @@
+# WizTurn Beacon SDK for Android
+
+COPYRIGHT(C) 2014 SK TELECOM. ALL RIGHTS RESERVED.
