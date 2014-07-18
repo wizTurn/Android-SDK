@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/SKT_SMART_GUIDE/!svn/ver/1453/Source/iBeaconSDK/android/WizTurnBeaconManager/res/anim
+END
+rotate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/SKT_SMART_GUIDE/!svn/ver/1453/Source/iBeaconSDK/android/WizTurnBeaconManager/res/anim/rotate.xml
+END
+move_right.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/SKT_SMART_GUIDE/!svn/ver/1453/Source/iBeaconSDK/android/WizTurnBeaconManager/res/anim/move_right.xml
+END
+move.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/SKT_SMART_GUIDE/!svn/ver/1453/Source/iBeaconSDK/android/WizTurnBeaconManager/res/anim/move.xml
+END
+move_left.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/SKT_SMART_GUIDE/!svn/ver/1453/Source/iBeaconSDK/android/WizTurnBeaconManager/res/anim/move_left.xml
+END

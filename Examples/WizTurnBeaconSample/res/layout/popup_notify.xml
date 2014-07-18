@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dim_color"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:layout_width="244dp"
+        android:layout_height="130dp"
+        android:background="@drawable/box_nf" >
+
+        <ImageButton
+            android:id="@+id/exitBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="200dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btn_00_x_up"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/popupBodyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/popupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/popupBodyTxt"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_confirm"
+            android:text="@string/confirm"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

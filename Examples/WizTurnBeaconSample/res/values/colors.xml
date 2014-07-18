@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="translucence">#55000000</color>
+    <color name="dim_color">#72000000</color>
+    <color name="blue">#4373ff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#b2b2b2</color>
+    <color name="dim_gray">#696969</color>
+    <color name="lightslate_gray">#778899</color>
+    <color name="white">#ffffff</color>
+    <color name="whitesmoke">#f5f5f5</color>
+    <color name="mintcream">#f5fffa</color>
+    <color name="skyblue">#31dff3</color>
+    <color name="red">#ff1800</color>
+    <color name="red2">#ff0018</color>
+    <color name="category_memo">#4c4c4c</color>
+    <color name="text_device_id">#464646</color>
+    <color name="text_name">#999999</color>
+    <color name="text_bike_name">#4373ff</color>
+</resources>
