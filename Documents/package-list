@@ -1,3 +1,6 @@
 com.wizturn.sdk
+com.wizturn.sdk.baseclass
 com.wizturn.sdk.connect
 com.wizturn.sdk.entity
+com.wizturn.sdk.service
+com.wizturn.sdk.utils
