@@ -498,6 +498,8 @@ public class ActivityNormalConnectChange extends FragmentActivity implements
 					break;
 				case PeripheralChangeEvent.CHANGE_TX_POWER:
 					break;
+				case PeripheralChangeEvent.CHANGE_PASSWORD:
+					break;
 				case PeripheralChangeEvent.CHANGE_UNKNWON:
 					break;
 			}
@@ -528,6 +530,8 @@ public class ActivityNormalConnectChange extends FragmentActivity implements
 				case PeripheralChangeEvent.CHANGE_PROXIMITY_UUID:
 					break;
 				case PeripheralChangeEvent.CHANGE_TX_POWER:
+					break;
+				case PeripheralChangeEvent.CHANGE_PASSWORD:
 					break;
 				case PeripheralChangeEvent.CHANGE_UNKNWON:
 					break;

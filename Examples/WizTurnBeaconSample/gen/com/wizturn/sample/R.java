@@ -9,19 +9,19 @@ package com.wizturn.sample;
 
 public final class R {
     public static final class array {
-        public static final int advertisement_time_interval=0x7f080000;
-        public static final int properties=0x7f080002;
-        public static final int txpower=0x7f080001;
+        public static final int advertisement_time_interval=0x7f070000;
+        public static final int properties=0x7f070002;
+        public static final int txpower=0x7f070001;
     }
     public static final class attr {
     }
     public static final class color {
-        public static final int activity_connect_group_delimiter=0x7f060001;
-        public static final int activity_connect_item_row_delimiter=0x7f060000;
+        public static final int activity_connect_group_delimiter=0x7f040001;
+        public static final int activity_connect_item_row_delimiter=0x7f040000;
     }
     public static final class dimen {
-        public static final int activity_connect_group_delimiter_height=0x7f070003;
-        public static final int activity_connect_item_row_margin=0x7f070002;
+        public static final int activity_connect_group_delimiter_height=0x7f050003;
+        public static final int activity_connect_item_row_margin=0x7f050002;
         /**  Default screen margins, per the Android Design guidelines. 
 
          Example customization of dimensions originally defined in res/values/dimens.xml
@@ -29,8 +29,8 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f070000;
-        public static final int activity_vertical_margin=0x7f070001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int arrow=0x7f020000;
@@ -108,60 +108,60 @@ public final class R {
         public static final int main_activity_actionbar=0x7f090001;
     }
     public static final class string {
-        public static final int actionbar_clear=0x7f04002a;
-        public static final int actionbar_connected=0x7f04002b;
-        public static final int actionbar_connecting=0x7f04002d;
-        public static final int actionbar_disconnected=0x7f04002c;
+        public static final int actionbar_clear=0x7f06002a;
+        public static final int actionbar_connected=0x7f06002b;
+        public static final int actionbar_connecting=0x7f06002d;
+        public static final int actionbar_disconnected=0x7f06002c;
         /**  ActionBar Titles 
          */
-        public static final int actionbar_scan=0x7f040028;
-        public static final int actionbar_stop=0x7f040029;
-        public static final int app_name=0x7f040000;
-        public static final int app_version=0x7f040001;
-        public static final int authentication=0x7f040007;
-        public static final int battery_level=0x7f040016;
-        public static final int bd_address=0x7f04000a;
-        public static final int bd_name=0x7f040009;
-        public static final int cancel=0x7f040006;
+        public static final int actionbar_scan=0x7f060028;
+        public static final int actionbar_stop=0x7f060029;
+        public static final int app_name=0x7f060000;
+        public static final int app_version=0x7f060001;
+        public static final int authentication=0x7f060007;
+        public static final int battery_level=0x7f060016;
+        public static final int bd_address=0x7f06000a;
+        public static final int bd_name=0x7f060009;
+        public static final int cancel=0x7f060006;
         /**  Change of multiple properties 
          */
-        public static final int change=0x7f04002e;
-        public static final int commit=0x7f04002f;
-        public static final int connect=0x7f04000e;
-        public static final int connected=0x7f040013;
-        public static final int copyright=0x7f040002;
-        public static final int distance=0x7f040010;
-        public static final int error_ble_not_support=0x7f040023;
-        public static final int error_cannot_add_change_action=0x7f040027;
-        public static final int error_connection_wrong=0x7f040025;
-        public static final int error_disconneted=0x7f040024;
-        public static final int error_is_not_connected=0x7f040026;
+        public static final int change=0x7f06002e;
+        public static final int commit=0x7f06002f;
+        public static final int connect=0x7f06000e;
+        public static final int connected=0x7f060013;
+        public static final int copyright=0x7f060002;
+        public static final int distance=0x7f060010;
+        public static final int error_ble_not_support=0x7f060023;
+        public static final int error_cannot_add_change_action=0x7f060027;
+        public static final int error_connection_wrong=0x7f060025;
+        public static final int error_disconneted=0x7f060024;
+        public static final int error_is_not_connected=0x7f060026;
         /**  Errors 
          */
-        public static final int error_null_peripheral=0x7f040022;
-        public static final int firmware_version=0x7f040018;
-        public static final int hardware_version=0x7f040017;
-        public static final int interval=0x7f040015;
-        public static final int major=0x7f04000b;
-        public static final int measured_power=0x7f04000f;
-        public static final int minor=0x7f04000c;
-        public static final int ok=0x7f040005;
-        public static final int password=0x7f040012;
-        public static final int password_guide=0x7f040004;
-        public static final int proximity=0x7f040011;
-        public static final int rssi=0x7f04000d;
-        public static final int toast_authorization_failure=0x7f04001d;
-        public static final int toast_authorization_success=0x7f04001c;
-        public static final int toast_connected=0x7f04001b;
-        public static final int toast_multiple_property_failure=0x7f040021;
-        public static final int toast_multiple_property_success=0x7f040020;
-        public static final int toast_password_change_failure=0x7f04001f;
-        public static final int toast_password_change_success=0x7f04001e;
-        public static final int tx_power=0x7f040014;
-        public static final int unit_dbm=0x7f040019;
-        public static final int unit_distance=0x7f04001a;
-        public static final int unknown=0x7f040003;
-        public static final int uuid=0x7f040008;
+        public static final int error_null_peripheral=0x7f060022;
+        public static final int firmware_version=0x7f060018;
+        public static final int hardware_version=0x7f060017;
+        public static final int interval=0x7f060015;
+        public static final int major=0x7f06000b;
+        public static final int measured_power=0x7f06000f;
+        public static final int minor=0x7f06000c;
+        public static final int ok=0x7f060005;
+        public static final int password=0x7f060012;
+        public static final int password_guide=0x7f060004;
+        public static final int proximity=0x7f060011;
+        public static final int rssi=0x7f06000d;
+        public static final int toast_authorization_failure=0x7f06001d;
+        public static final int toast_authorization_success=0x7f06001c;
+        public static final int toast_connected=0x7f06001b;
+        public static final int toast_multiple_property_failure=0x7f060021;
+        public static final int toast_multiple_property_success=0x7f060020;
+        public static final int toast_password_change_failure=0x7f06001f;
+        public static final int toast_password_change_success=0x7f06001e;
+        public static final int tx_power=0x7f060014;
+        public static final int unit_dbm=0x7f060019;
+        public static final int unit_distance=0x7f06001a;
+        public static final int unknown=0x7f060003;
+        public static final int uuid=0x7f060008;
     }
     public static final class style {
         /** 
@@ -184,33 +184,11 @@ public final class R {
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f080001;
     }
 }
