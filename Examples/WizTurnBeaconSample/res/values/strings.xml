@@ -1,10 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">WIZTURN Sample</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_version">0.0.1</string>
+    <string name="copyright">COPYRIGHT(C) 2014 DIO INTERACTIVE. ALL RIGHT RESERVED.</string>
+    
+    <string name="unknown">Unknown</string>
+    <string name="password_guide">Plase input authentication password</string>
+    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="confirm">Confirm</string>
-
+    <string name="authentication">Authentication</string>
+    
+    <string name="uuid">UUID</string>
+    <string name="bd_name">BD Name</string> 
+    <string name="bd_address">BD Address</string>
+    <string name="major">Major</string>
+    <string name="minor">Minor</string>
+    <string name="rssi">RSSI</string>
+    <string name="connect">Connect</string>
+    <string name="measured_power">Measured Power</string>
+    <string name="distance">Distance</string>
+    <string name="proximity">Proximity</string>
+    <string name="password">Password</string>
+    
+    <string name="connected">Connected</string>
+    <string name="tx_power">TX Power</string>
+    <string name="interval">Interval</string>
+    <string name="battery_level">Battery Level</string>
+    
+    <string name="hardware_version">Hardware Version</string>
+    <string name="firmware_version">Firmware Version</string>
+    
+    <string name="unit_dbm">dBm</string>
+    <string name="unit_distance">m</string>
+    
+    <string name="toast_connected">Connected...</string>
+    <string name="toast_authorization_success">Authorization succeeded...</string>
+    <string name="toast_authorization_failure">Authorization failed...</string>
+    <string name="toast_password_change_success">Changing password succeeded...</string>
+    <string name="toast_password_change_failure">Changing password failed...</string>
+    <string name="toast_multiple_property_success">Changing multiple properties succeeded...</string>
+    <string name="toast_multiple_property_failure">Changing multiple properties failed...</string>    
+    
+    <!-- Errors -->
+    <string name="error_null_peripheral">Peripheral is null. Something is wrong.</string>
+    <string name="error_ble_not_support">The device doesn\'t support BLE.\nPlease run on a 
+        supportable device.</string>
+    <string name="error_disconneted">Disconnected...</string>
+    <string name="error_connection_wrong">Connecting to the peripheral failed...</string>
+    <string name="error_is_not_connected">The central doesn\'t connected to the peripheral yet!</string>
+    <string name="error_cannot_add_change_action">Cannot add change action.\nEither the change 
+        action is already registered or not correct</string>
+    
+    <!-- ActionBar Titles -->
+    <string name="actionbar_scan">SCAN</string>
+    <string name="actionbar_stop">STOP</string>
+    <string name="actionbar_clear">CLEAR</string>    
+    <string name="actionbar_connected">connected</string>
+    <string name="actionbar_disconnected">disconnected</string>
+    <string name="actionbar_connecting">connecting</string>
+    
+    <!-- Change of multiple properties -->
+    <string name="change">Change</string>
+    <string name="commit">Commit</string>
+    
+    <string-array name="advertisement_time_interval">
+        <item>0.2Hz</item>
+        <item>0.3Hz</item>
+        <item>0.5Hz</item>
+        <item>1.0Hz</item>
+        <item>2.0Hz</item>
+        <item>5.0Hz</item>
+        <item>10.0Hz</item>
+        <item>15.0Hz</item>
+        <item>20.0Hz</item>
+    </string-array>
+    
+    <string-array name="txpower">
+        <item>-23dBm</item>
+        <item>-19dBm</item>
+        <item>-16dBm</item>
+        <item>-12dBm</item>
+        <item>-9dBm</item>
+        <item>-5dBm</item>
+        <item>0dBm</item>
+        <item>4dBm</item>
+    </string-array>
+    
+    <string-array name="properties">
+        <item>UUID</item>
+        <item>Major</item>
+        <item>Minor</item>
+        <item>TxPower</item>
+        <item>Advertisement time interval</item>
+        <item>Password</item>
+    </string-array>
 </resources>

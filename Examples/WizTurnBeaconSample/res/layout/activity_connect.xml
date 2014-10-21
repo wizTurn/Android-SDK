@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+	    
+	    <View android:layout_width="match_parent"
+	        android:layout_height="@dimen/activity_connect_group_delimiter_height"
+	        android:background="@color/activity_connect_group_delimiter"/>
+	    
+	    <!-- Group 1 -->
+	    <LinearLayout android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        <!-- UUID -->
+	        <RelativeLayout android:id="@+id/layout_uuid" 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:clickable="true"
+	            android:background="@drawable/connect_activity_row_background">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/uuid"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"
+	                android:layout_centerVertical="true"/>
+	            <ImageView android:id="@+id/image_next1" 
+	                android:layout_width="20dp"
+	                android:layout_height="20dp"
+	                android:src="@drawable/arrow"
+	                android:background="@null"
+	                android:scaleType="fitCenter"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"/>	            
+	            <TextView android:id="@+id/text_uuid_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_toLeftOf="@id/image_next1"
+	                android:layout_centerVertical="true"/>
+	        </RelativeLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- BD Name -->
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:background="@android:color/white">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/bd_name"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <TextView android:id="@+id/text_bdname_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_marginRight="20dp"/>
+	        </LinearLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- BD Address -->
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:background="@android:color/white">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/bd_address"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <TextView android:id="@+id/text_bdaddress_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_marginRight="20dp"/>
+	        </LinearLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- Major ID -->
+	        <RelativeLayout android:id="@+id/layout_major" 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:clickable="true"
+	            android:background="@drawable/connect_activity_row_background">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/major"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"
+	                android:layout_centerVertical="true"/>
+	            <ImageView android:id="@+id/image_next2" 
+	                android:layout_width="20dp"
+	                android:layout_height="20dp"
+	                android:src="@drawable/arrow"
+	                android:background="@null"
+	                android:scaleType="fitCenter"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"/>
+	            <TextView android:id="@+id/text_major_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_toLeftOf="@id/image_next2"
+	                android:layout_centerVertical="true"/>
+	        </RelativeLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- Minor ID -->
+	        <RelativeLayout android:id="@+id/layout_minor" 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:clickable="true"
+	            android:background="@drawable/connect_activity_row_background">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/minor"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"
+	                android:layout_centerVertical="true"/>
+	            <ImageView android:id="@+id/image_next3" 
+	                android:layout_width="20dp"
+	                android:layout_height="20dp"
+	                android:src="@drawable/arrow"
+	                android:background="@null"
+	                android:scaleType="fitCenter"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"/>
+	            <TextView android:id="@+id/text_minor_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_toLeftOf="@id/image_next3"
+	                android:layout_centerVertical="true"/>
+	        </RelativeLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- RSSI -->
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:background="@android:color/white">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/rssi"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <TextView android:id="@+id/text_rssi_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_marginRight="20dp"/>
+	        </LinearLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- Measured Power -->
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:background="@android:color/white">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/measured_power"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"
+	                android:layout_centerVertical="true"/>
+	            <TextView android:id="@+id/text_measured_power_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_marginRight="20dp"/>
+	        </LinearLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- Distance -->
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:background="@android:color/white">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/distance"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <TextView android:id="@+id/text_distance_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_marginRight="20dp"/>
+	        </LinearLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- Proximity -->
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:background="@android:color/white">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/proximity"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <TextView android:id="@+id/text_proximity_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_marginRight="20dp"/>
+	        </LinearLayout>
+	    </LinearLayout>
+	    
+	    <View android:layout_width="match_parent"
+	        android:layout_height="@dimen/activity_connect_group_delimiter_height"
+	        android:background="@color/activity_connect_group_delimiter"/>
+	    
+	    <!-- Group 2 -->
+		<LinearLayout android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        <!-- Connected -->
+	        <!--  
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="@dimen/activity_connect_item_row_margin">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/connected"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <TextView android:id="@+id/text_connected_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"/>
+	        </LinearLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	         -->
+	        <!-- TX Power -->
+	        <RelativeLayout android:id="@+id/layout_txpower" 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:clickable="true"
+	            android:background="@drawable/connect_activity_row_background">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/tx_power"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"
+	                android:layout_centerVertical="true"/>
+	            <ImageView android:id="@+id/image_next4" 
+	                android:layout_width="20dp"
+	                android:layout_height="20dp"
+	                android:src="@drawable/arrow"
+	                android:background="@null"
+	                android:scaleType="fitCenter"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"/>
+	            <TextView android:id="@+id/text_txpower_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_toLeftOf="@id/image_next4"
+	                android:layout_centerVertical="true"/>
+	        </RelativeLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- Interval -->
+	        <RelativeLayout android:id="@+id/layout_advertisement_time_interval" 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:clickable="true"
+	            android:background="@drawable/connect_activity_row_background">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/interval"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <ImageView android:id="@+id/image_next5" 
+	                android:layout_width="20dp"
+	                android:layout_height="20dp"
+	                android:src="@drawable/arrow"
+	                android:background="@null"
+	                android:scaleType="fitCenter"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"/>
+	            <TextView android:id="@+id/text_interval_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_toLeftOf="@id/image_next5"
+	                android:layout_centerVertical="true"/>
+	        </RelativeLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- Battery Level -->
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:background="@android:color/white">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/battery_level"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <TextView android:id="@+id/text_battery_level_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_marginRight="20dp"/>
+	        </LinearLayout>        
+	    </LinearLayout>
+	    
+	    <View android:layout_width="match_parent"
+	        android:layout_height="@dimen/activity_connect_group_delimiter_height"
+	        android:background="@color/activity_connect_group_delimiter"/>
+	    
+	    <!-- Group 3 -->
+	    <LinearLayout android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        <!-- Hardware Version -->
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:background="@android:color/white">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/hardware_version"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <TextView android:id="@+id/text_hardware_version_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_marginRight="20dp"/>
+	        </LinearLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	        <!-- Firmware Version -->
+	        <LinearLayout android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:background="@android:color/white">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/firmware_version"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <TextView android:id="@+id/text_firmware_version_value" 
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:textSize="12dp"
+	                android:gravity="right|center_vertical"
+	                android:layout_marginRight="20dp"/>
+	        </LinearLayout>
+	        <View android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:background="@color/activity_connect_item_row_delimiter"/>
+	    </LinearLayout>
+	    
+	     <View android:layout_width="match_parent"
+	        android:layout_height="@dimen/activity_connect_group_delimiter_height"
+	        android:background="@color/activity_connect_group_delimiter"/>
+	    
+	    <!-- Group 4 -->
+	    <LinearLayout android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        <RelativeLayout android:id="@+id/layout_password" 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/activity_connect_item_row_margin"
+	            android:clickable="true"
+	            android:background="@drawable/connect_activity_row_background">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/password"
+	                android:textSize="16dp"
+	                android:textColor="@android:color/black"/>
+	            <ImageView android:layout_width="20dp"
+	                android:layout_height="20dp"
+	                android:src="@drawable/arrow"
+	                android:background="@null"
+	                android:scaleType="fitCenter"
+	                android:layout_alignParentRight="true"
+	                android:layout_centerVertical="true"/>	            
+	        </RelativeLayout>
+        </LinearLayout>
+	</LinearLayout>
+</ScrollView>

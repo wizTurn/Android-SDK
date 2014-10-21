@@ -1,6 +1,7 @@
 com.wizturn.sdk
-com.wizturn.sdk.baseclass
-com.wizturn.sdk.connect
-com.wizturn.sdk.entity
-com.wizturn.sdk.service
+com.wizturn.sdk.central
+com.wizturn.sdk.central.state
+com.wizturn.sdk.central.task
+com.wizturn.sdk.connection
+com.wizturn.sdk.peripheral
 com.wizturn.sdk.utils

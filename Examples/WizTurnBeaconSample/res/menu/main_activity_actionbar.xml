@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.wizturnbeaconr4.MainActivity">
+    <item android:id="@+id/scan"
+        android:showAsAction="always"
+        android:title="@string/actionbar_scan"/>
+    <item android:id="@+id/clear"
+        android:showAsAction="always"
+        android:title="@string/actionbar_clear"/>
+</menu>

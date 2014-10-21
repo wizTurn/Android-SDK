@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="activity_connect_item_row_delimiter">#ffABC3D5</color>
+    <color name="activity_connect_group_delimiter">#ffABC3D5</color>
+</resources>
