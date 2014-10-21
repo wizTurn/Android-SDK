@@ -50,8 +50,18 @@ CentralManager centralManager = CentralManager.getInstance(getApplicationContext
 centralManager.setPeripheralScanListener(new PeripheralScanListener() {
     @Override
 	public void onPeripheralScan(Central central, final Peripheral peripheral) {
-		// TODO do whatever you want with Peripheral(namely beaocn)			
-	}			
+		// TODO do whatever you want with Peripheral(namely beaocn)
+		peripheral.getBDAddress();	// gets Bluetooth Device address
+		peripheral.getBDName();	// gets Bluetooth Device Name
+		peripheral.getDistance();	// gets distance between peripheral and central device
+		peripheral.getProximityUUID();	// gets uuid
+		peripheral.getMajor();	// gets major id
+		peripheral.getMinor();	// gets minor id
+		peripheral.getBroadcastTime();	// gets broadcast time of the peripheral
+		peripheral.getMeasuredPower();	// gets measured power in (dBm)
+		peripheral.getProximity();	// gets proximity
+		peripheral.getRssi();	// gets RSSI(Received Signal Strength Indicator) in (dBm)
+	}
 });
 // if bluetooth is disabled, then turn on before going further
 if(!centralManager.isBluetoothEnabled()) {
