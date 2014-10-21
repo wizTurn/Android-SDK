@@ -10,11 +10,11 @@ Android 4.3+ support
 
 ## [Changelog](https://github.com/wizTurn/Android-SDK/blob/master/CHANGELOG.md)
 
-## Quick Setup
+## Where's the old sdk???
+* You can find the old version of WIZTURN SDK in the follow directory.
+* [**Old WIZTURN SDK**](https://github.com/wizTurn/Android-SDK/tree/master/wizturn-sdk1.1-old)
 
-### Where's the old sdk???
-You can find the old version of WIZTURN SDK in the follow directory.
-** Old WIZTURN SDK ***(https://github.com/wizTurn/Android-SDK/tree/master/wizturn-sdk1.1-old)
+## Quick Setup
 
 ### 1. Include library
 * [Downlaod](https://github.com/wizTurn/Android-SDK/tree/master/wizTurnSDK/wizturnbeaconsdk-2.0.0.jar)
