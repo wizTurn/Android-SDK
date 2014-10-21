@@ -8,15 +8,16 @@ It makes developers to create an Android application communicating with peripher
 
 Android 4.3+ support
 
-## Downloads
-* 
-* 
-
 ## [Changelog](https://github.com/wizTurn/Android-SDK/blob/master/CHANGELOG.md)
 
 ## Quick Setup
+
+### Where's the old sdk???
+You can find the old version of WIZTURN SDK in the follow directory.
+** Old WIZTURN SDK ***(https://github.com/wizTurn/Android-SDK/tree/master/wizturn-sdk1.1-old)
+
 ### 1. Include library
-* [Downlaod](https://github.com/wizTurn/Android-SDK/blob/master/wizTurnSDK/wizturnbeaconsdk.jar)
+* [Downlaod](https://github.com/wizTurn/Android-SDK/tree/master/wizTurnSDK/wizturnbeaconsdk-2.0.0.jar)
 * Put the jar file in the **libs** sub directory of your Android project
 
 ### 2. Android Manifest
