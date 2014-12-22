@@ -17,7 +17,7 @@ Android 4.3+ support
 ## Quick Setup
 
 ### 1. Include library
-* [Downlaod](https://github.com/wizTurn/Android-SDK/tree/master/wizTurnSDK/wizturnbeaconsdk-2.0.0.jar)
+* [Downlaod](https://github.com/wizTurn/Android-SDK/tree/master/wizTurnSDK/wizturnbeaconsdk-2.0.1.jar)
 * Put the jar file in the **libs** sub directory of your Android project
 
 ### 2. Android Manifest
