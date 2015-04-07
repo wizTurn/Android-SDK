@@ -12,4 +12,6 @@ Android 4.3+ support
 
 [Get Started with Wizturn SDK 2.1.0](https://github.com/wizTurn/Android-SDK/wiki)!
 
+[Get Started with Wizturn Manager](https://play.google.com/store/apps/details?id=com.wizturn.manager&hl=en)!
+
 **COPYRIGHT(C) 2014 SK TELECOM. ALL RIGHTS RESERVED.**
