@@ -139,7 +139,9 @@ public class PeripheralListAdapter extends BaseAdapter {
 						intent = new Intent(context, ActivityDelayedConnectChange.class);
 					} else if(mode.equalsIgnoreCase("group")) {
 						intent = new Intent(context, ActivityMultipleChange.class);
-					}
+					} else if(mode.equalsIgnoreCase("nordic_chip_based")) {
+						intent = new Intent(context, ActivityNordicChip.class);
+					}				
 					
 					intent.putExtra("peripheral", peripheral);
 					context.startActivity(intent);

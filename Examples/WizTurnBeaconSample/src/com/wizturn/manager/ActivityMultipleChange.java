@@ -25,9 +25,11 @@ import com.wizturn.sdk.peripheral.OnConnectListener;
 import com.wizturn.sdk.peripheral.Peripheral;
 import com.wizturn.sdk.peripheral.PeripheralAccessListener;
 import com.wizturn.sdk.peripheral.PeripheralChangeEvent;
+import com.wizturn.sdk.peripheral.PeripheralEvent;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.method.ScrollingMovementMethod;
@@ -61,6 +63,8 @@ public class ActivityMultipleChange extends FragmentActivity implements
 	private Peripheral peripheral;
 	private MultiplePropertyChangeBuilder mpcBuilder;
 	private Timer connectingAniTimer;
+	
+	Handler handler = new Handler();
 	
 	// Views
 	private Toast toast;
@@ -363,7 +367,12 @@ public class ActivityMultipleChange extends FragmentActivity implements
 					toast.show();						
 					try {
 						stopConnectingAnimation();
-						connectMenuItem.setTitle(R.string.actionbar_disconnected);
+						handler.postDelayed(new Runnable() {
+							@Override
+							public void run() {
+								connectMenuItem.setTitle(R.string.actionbar_disconnected);
+							}
+						}, 100);
 					} catch(Exception e) {
 						Log.e(TAG, "onDisconnected() : exception : " + e.getMessage());
 					}
@@ -380,7 +389,12 @@ public class ActivityMultipleChange extends FragmentActivity implements
 					
 					try {
 						stopConnectingAnimation();
-						connectMenuItem.setTitle(R.string.actionbar_disconnected);							
+						handler.postDelayed(new Runnable() {
+							@Override
+							public void run() {
+								connectMenuItem.setTitle(R.string.actionbar_disconnected);
+							}
+						}, 100);				
 					} catch(Exception e) {
 						Log.e(TAG, "onError() : exception : " + e.getMessage());
 					}
@@ -570,6 +584,15 @@ public class ActivityMultipleChange extends FragmentActivity implements
 					toast.show();
 				}
 			});			
+		}
+
+		@Override
+		public void onReadingCompleted(Peripheral peripheral,
+				PeripheralEvent event) {
+		}
+
+		@Override
+		public void onReadingFailed(Peripheral peripheral, PeripheralEvent event) {
 		}
 	};
 	

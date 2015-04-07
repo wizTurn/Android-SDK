@@ -29,7 +29,8 @@ public class ActivityList extends Activity {
 	private final String LOG_TAG = ActivityList.class.getSimpleName();
 	private String[] stringArray = new String[] {
 			"Scan/Normal connect&change", "Scan/Delayed connect&change",
-			"Scan/Changing multiple properties by a single method call"
+			"Scan/Changing multiple properties by a single method call",
+			"Control Nordic based beacons(LB2030C, LB3000, LB2050)"
 	};
 	
 	@Override
@@ -64,6 +65,10 @@ public class ActivityList extends Activity {
 					case 2:
 						intent = new Intent(ActivityList.this, ActivityMain.class);
 						intent.putExtra("mode", "group");
+						break;
+					case 3:
+						intent = new Intent(ActivityList.this, ActivityMain.class);
+						intent.putExtra("mode", "nordic_chip_based");
 						break;
 				}
 				

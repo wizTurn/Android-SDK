@@ -9,9 +9,19 @@ package com.wizturn.sample;
 
 public final class R {
     public static final class array {
+        /**  for LB2030 or lower 
+         */
         public static final int advertisement_time_interval=0x7f070000;
-        public static final int properties=0x7f070002;
-        public static final int txpower=0x7f070001;
+        /**  for LB3000 or compatible 
+         */
+        public static final int advertisement_time_interval_for_nordic_based=0x7f070001;
+        public static final int properties=0x7f070004;
+        /**  for LB2030 or lower 
+         */
+        public static final int txpower=0x7f070002;
+        /**  for LB3000 or compatible 
+         */
+        public static final int txpower_for_nordic_based=0x7f070003;
     }
     public static final class attr {
     }
@@ -40,82 +50,111 @@ public final class R {
         public static final int main=0x7f020004;
     }
     public static final class id {
-        public static final int button_change=0x7f0a001c;
-        public static final int button_commit=0x7f0a001d;
-        public static final int button_connect=0x7f0a002e;
-        public static final int clear=0x7f0a0032;
-        public static final int connect=0x7f0a0030;
-        public static final int edittext=0x7f0a0021;
-        public static final int edittext_uuid1=0x7f0a0023;
-        public static final int edittext_uuid2=0x7f0a0024;
-        public static final int edittext_uuid3=0x7f0a0025;
-        public static final int edittext_uuid4=0x7f0a0026;
-        public static final int edittext_uuid5=0x7f0a0027;
-        public static final int image_ibeacon=0x7f0a002f;
+        public static final int button_change=0x7f0a0030;
+        public static final int button_commit=0x7f0a0031;
+        public static final int button_connect=0x7f0a0047;
+        public static final int clear=0x7f0a004b;
+        public static final int connect=0x7f0a0049;
+        public static final int container=0x7f0a0038;
+        public static final int delimeter_line1=0x7f0a001b;
+        public static final int delimeter_line2=0x7f0a001f;
+        public static final int delimeter_line3=0x7f0a0029;
+        public static final int delimeter_line4=0x7f0a002c;
+        public static final int delimeter_line5=0x7f0a0023;
+        public static final int edittext=0x7f0a0035;
+        public static final int edittext_uuid1=0x7f0a003c;
+        public static final int edittext_uuid2=0x7f0a003d;
+        public static final int edittext_uuid3=0x7f0a003e;
+        public static final int edittext_uuid4=0x7f0a003f;
+        public static final int edittext_uuid5=0x7f0a0040;
+        public static final int image_ibeacon=0x7f0a0048;
         public static final int image_next1=0x7f0a0001;
+        public static final int image_next10=0x7f0a001a;
         public static final int image_next2=0x7f0a0006;
         public static final int image_next3=0x7f0a0009;
         public static final int image_next4=0x7f0a0010;
         public static final int image_next5=0x7f0a0013;
+        public static final int image_next6=0x7f0a001d;
+        public static final int image_next7=0x7f0a0021;
+        public static final int image_next8=0x7f0a0025;
         public static final int layout_advertisement_time_interval=0x7f0a0012;
+        public static final int layout_bdname=0x7f0a0019;
+        public static final int layout_current_time=0x7f0a001c;
+        public static final int layout_led_mode=0x7f0a0024;
         public static final int layout_major=0x7f0a0005;
+        public static final int layout_manufacturer_name=0x7f0a002a;
         public static final int layout_minor=0x7f0a0008;
+        public static final int layout_model_number=0x7f0a0027;
         public static final int layout_password=0x7f0a0018;
+        public static final int layout_sleep_time=0x7f0a0020;
         public static final int layout_txpower=0x7f0a000f;
         public static final int layout_uuid=0x7f0a0000;
-        public static final int listview=0x7f0a0019;
-        public static final int number_picker=0x7f0a0022;
-        public static final int password=0x7f0a0020;
-        public static final int scan=0x7f0a0031;
-        public static final int spinner=0x7f0a001b;
-        public static final int swipe_refresh_layout=0x7f0a001a;
+        public static final int listview=0x7f0a002d;
+        public static final int number_picker=0x7f0a0036;
+        public static final int password=0x7f0a0034;
+        public static final int scan=0x7f0a004a;
+        public static final int spinner=0x7f0a002f;
+        public static final int swipe_refresh_layout=0x7f0a002e;
         public static final int text_battery_level_value=0x7f0a0015;
-        public static final int text_bd_address=0x7f0a002a;
-        public static final int text_bd_name=0x7f0a0029;
+        public static final int text_bd_address=0x7f0a0043;
+        public static final int text_bd_name=0x7f0a0042;
         public static final int text_bdaddress_value=0x7f0a0004;
         public static final int text_bdname_value=0x7f0a0003;
+        public static final int text_current_time_value=0x7f0a001e;
         public static final int text_distance_value=0x7f0a000d;
         public static final int text_firmware_version_value=0x7f0a0017;
         public static final int text_hardware_version_value=0x7f0a0016;
         public static final int text_interval_value=0x7f0a0014;
-        public static final int text_major=0x7f0a002b;
+        public static final int text_led_mode_value=0x7f0a0026;
+        public static final int text_major=0x7f0a0044;
         public static final int text_major_value=0x7f0a0007;
+        public static final int text_manufacturer_name_value=0x7f0a002b;
         public static final int text_measured_power_value=0x7f0a000c;
-        public static final int text_minor=0x7f0a002c;
+        public static final int text_minor=0x7f0a0045;
         public static final int text_minor_value=0x7f0a000a;
+        public static final int text_model_number_value=0x7f0a0028;
         public static final int text_proximity_value=0x7f0a000e;
-        public static final int text_rssi=0x7f0a002d;
+        public static final int text_rssi=0x7f0a0046;
         public static final int text_rssi_value=0x7f0a000b;
+        public static final int text_sleep_time_value=0x7f0a0022;
         public static final int text_txpower_value=0x7f0a0011;
-        public static final int text_uuid=0x7f0a0028;
+        public static final int text_uuid=0x7f0a0041;
         public static final int text_uuid_value=0x7f0a0002;
-        public static final int textview_peripheral_change_list=0x7f0a001e;
-        public static final int textview_peripheral_info=0x7f0a001f;
+        public static final int textview_peripheral_change_list=0x7f0a0032;
+        public static final int textview_peripheral_info=0x7f0a0033;
+        public static final int timer_picker=0x7f0a0037;
+        public static final int timer_picker_endtime=0x7f0a003b;
+        public static final int timer_picker_starttime=0x7f0a003a;
+        public static final int toggle_button=0x7f0a0039;
     }
     public static final class layout {
         public static final int activity_connect=0x7f030000;
-        public static final int activity_list=0x7f030001;
-        public static final int activity_main=0x7f030002;
-        public static final int activity_multiple_change=0x7f030003;
-        public static final int dialog_authentication=0x7f030004;
-        public static final int dialog_one_edittext=0x7f030005;
-        public static final int dialog_one_numberpicker=0x7f030006;
-        public static final int dialog_setting_uuid=0x7f030007;
-        public static final int peripheral_list_row=0x7f030008;
+        public static final int activity_connect_nordic=0x7f030001;
+        public static final int activity_list=0x7f030002;
+        public static final int activity_main=0x7f030003;
+        public static final int activity_multiple_change=0x7f030004;
+        public static final int dialog_authentication=0x7f030005;
+        public static final int dialog_one_edittext=0x7f030006;
+        public static final int dialog_one_numberpicker=0x7f030007;
+        public static final int dialog_one_timepicker=0x7f030008;
+        public static final int dialog_radio_buttons=0x7f030009;
+        public static final int dialog_setting_sleeptime=0x7f03000a;
+        public static final int dialog_setting_uuid=0x7f03000b;
+        public static final int peripheral_list_row=0x7f03000c;
     }
     public static final class menu {
         public static final int connect_activity_actionbar=0x7f090000;
         public static final int main_activity_actionbar=0x7f090001;
     }
     public static final class string {
-        public static final int actionbar_clear=0x7f06002a;
-        public static final int actionbar_connected=0x7f06002b;
-        public static final int actionbar_connecting=0x7f06002d;
-        public static final int actionbar_disconnected=0x7f06002c;
+        public static final int actionbar_clear=0x7f060033;
+        public static final int actionbar_connected=0x7f060034;
+        public static final int actionbar_connecting=0x7f060036;
+        public static final int actionbar_disconnected=0x7f060035;
         /**  ActionBar Titles 
          */
-        public static final int actionbar_scan=0x7f060028;
-        public static final int actionbar_stop=0x7f060029;
+        public static final int actionbar_scan=0x7f060031;
+        public static final int actionbar_stop=0x7f060032;
         public static final int app_name=0x7f060000;
         public static final int app_version=0x7f060001;
         public static final int authentication=0x7f060007;
@@ -125,41 +164,50 @@ public final class R {
         public static final int cancel=0x7f060006;
         /**  Change of multiple properties 
          */
-        public static final int change=0x7f06002e;
-        public static final int commit=0x7f06002f;
+        public static final int change=0x7f060037;
+        public static final int commit=0x7f060038;
         public static final int connect=0x7f06000e;
         public static final int connected=0x7f060013;
         public static final int copyright=0x7f060002;
+        public static final int current_time=0x7f060017;
+        public static final int disabled=0x7f060028;
         public static final int distance=0x7f060010;
-        public static final int error_ble_not_support=0x7f060023;
-        public static final int error_cannot_add_change_action=0x7f060027;
-        public static final int error_connection_wrong=0x7f060025;
-        public static final int error_disconneted=0x7f060024;
-        public static final int error_is_not_connected=0x7f060026;
+        public static final int enabled=0x7f060027;
+        public static final int end_time=0x7f06002a;
+        public static final int error_ble_not_support=0x7f06002c;
+        public static final int error_cannot_add_change_action=0x7f060030;
+        public static final int error_connection_wrong=0x7f06002e;
+        public static final int error_disconneted=0x7f06002d;
+        public static final int error_is_not_connected=0x7f06002f;
         /**  Errors 
          */
-        public static final int error_null_peripheral=0x7f060022;
-        public static final int firmware_version=0x7f060018;
-        public static final int hardware_version=0x7f060017;
+        public static final int error_null_peripheral=0x7f06002b;
+        public static final int firmware_version=0x7f06001b;
+        public static final int hardware_version=0x7f06001a;
         public static final int interval=0x7f060015;
+        public static final int led_mode=0x7f060019;
         public static final int major=0x7f06000b;
+        public static final int manufacturer_name=0x7f06001d;
         public static final int measured_power=0x7f06000f;
         public static final int minor=0x7f06000c;
+        public static final int model_number=0x7f06001c;
         public static final int ok=0x7f060005;
         public static final int password=0x7f060012;
         public static final int password_guide=0x7f060004;
         public static final int proximity=0x7f060011;
         public static final int rssi=0x7f06000d;
-        public static final int toast_authorization_failure=0x7f06001d;
-        public static final int toast_authorization_success=0x7f06001c;
-        public static final int toast_connected=0x7f06001b;
-        public static final int toast_multiple_property_failure=0x7f060021;
-        public static final int toast_multiple_property_success=0x7f060020;
-        public static final int toast_password_change_failure=0x7f06001f;
-        public static final int toast_password_change_success=0x7f06001e;
+        public static final int sleep_time=0x7f060018;
+        public static final int start_time=0x7f060029;
+        public static final int toast_authorization_failure=0x7f060022;
+        public static final int toast_authorization_success=0x7f060021;
+        public static final int toast_connected=0x7f060020;
+        public static final int toast_multiple_property_failure=0x7f060026;
+        public static final int toast_multiple_property_success=0x7f060025;
+        public static final int toast_password_change_failure=0x7f060024;
+        public static final int toast_password_change_success=0x7f060023;
         public static final int tx_power=0x7f060014;
-        public static final int unit_dbm=0x7f060019;
-        public static final int unit_distance=0x7f06001a;
+        public static final int unit_dbm=0x7f06001e;
+        public static final int unit_distance=0x7f06001f;
         public static final int unknown=0x7f060003;
         public static final int uuid=0x7f060008;
     }

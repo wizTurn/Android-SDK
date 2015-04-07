@@ -1,12 +1,18 @@
 package com.wizturn.manager.dialog;
 
 import com.wizturn.sample.R;
+import com.wizturn.sdk.utils.DeviceInfoHelper;
+import com.wizturn.sdk.utils.TimeIntervalConverter;
+import com.wizturn.sdk.utils.TimeIntervalConverterForNordicBased;
+import com.wizturn.sdk.utils.TxPowerConverter;
+import com.wizturn.sdk.utils.TxPowerConverterForNordicBased;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -15,15 +21,23 @@ import android.widget.NumberPicker;
 public class DialogSettingAdvertisementInterval extends DialogFragment {
 	private final String LOG_TAG = DialogSettingAdvertisementInterval.class.getSimpleName();
 	public static final String FRAGMENT_TAG = "dialog_advint";
+	private boolean isNordicBased = false;
 	
 	private OnClickListener listener;
 	private NumberPicker numberPicker;
 	
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		String[] values = null;
+		if(DeviceInfoHelper.isNordicModel(getArguments().getString("beacon_model"))) {
+			values = getResources().getStringArray(R.array.advertisement_time_interval_for_nordic_based);
+			isNordicBased = true;
+		} else {
+			values = getResources().getStringArray(R.array.advertisement_time_interval);
+			isNordicBased = false;
+		}
 		
-		String[] values = getResources().getStringArray(R.array.advertisement_time_interval);
+		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 		View view = inflater.inflate(R.layout.dialog_one_numberpicker, null);
 		setNumberPicker(view, values);				
@@ -60,54 +74,38 @@ public class DialogSettingAdvertisementInterval extends DialogFragment {
 		numberPicker.setMaxValue(values.length - 1);
 		numberPicker.setDisplayedValues(values);
 		
-		float interval = getArguments().getFloat("interval");		
+		float interval = getArguments().getFloat("interval");
 		int value = -1;
+		Log.d(LOG_TAG, "setNumberPicker() : interval : " + interval);
 		
-		if(interval == 0.2f) {
-			value = 0;
-		} else if(interval == 0.3f) {
-			value = 1;
-		} else if(interval == 0.5f) {
-			value = 2;
-		} else if(interval == 1.0f) {
-			value = 3;
-		} else if(interval == 2.0f) {
-			value = 4;
-		} else if(interval == 5.0f) {
-			value = 5;
-		} else if(interval == 10.0f) {
-			value = 6;
-		} else if(interval == 15.0f) {
-			value = 7;
-		} else if(interval == 20.0f) {
-			value = 8;
+		if(isNordicBased) {
+			for(int i = 0; i < TimeIntervalConverterForNordicBased.INTERVAL_ARRAY.length; i++) {
+				if(TimeIntervalConverterForNordicBased.INTERVAL_ARRAY[i] == interval) {
+					value = i;
+					break;
+				}
+			}
+		} else {
+			for(int i = 0; i < TimeIntervalConverter.INTERVAL_ARRAY.length; i++) {
+				if(TimeIntervalConverter.INTERVAL_ARRAY[i] == interval) {
+					value = i;
+					break;
+				}
+			}
 		}
 		
 		numberPicker.setValue(value);
 	}
 	
 	private float getIntervalFromIndexValue(int indexValue) {
-		switch(indexValue) {
-			case 0:
-				return 0.2f;
-			case 1:
-				return 0.3f;
-			case 2:
-				return 0.5f;
-			case 3:
-				return 1.0f;
-			case 4:
-				return 2.0f;
-			case 5:
-				return 5.0f;
-			case 6:
-				return 10.0f;
-			case 7:
-				return 15.0f;
-			case 8:
-				return 20.0f;
-			default:
-				return -1;
+		try {
+			if(isNordicBased) {
+				return TimeIntervalConverterForNordicBased.INTERVAL_ARRAY[indexValue];
+			} else {
+				return TimeIntervalConverter.INTERVAL_ARRAY[indexValue];
+			}
+		} catch(Exception e) {
+			return -1;
 		}
 	}
 	

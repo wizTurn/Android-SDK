@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">WIZTURN Sample</string>
     <string name="app_version">0.0.1</string>
-    <string name="copyright">COPYRIGHT(C) 2014 DIO INTERACTIVE. ALL RIGHT RESERVED.</string>
+    <string name="copyright">COPYRIGHT(C) 2015 DIO INTERACTIVE. ALL RIGHT RESERVED.</string>
     
     <string name="unknown">Unknown</string>
     <string name="password_guide">Plase input authentication password</string>
@@ -26,9 +26,14 @@
     <string name="tx_power">TX Power</string>
     <string name="interval">Interval</string>
     <string name="battery_level">Battery Level</string>
+    <string name="current_time">Current Time</string>
+    <string name="sleep_time">Sleep Time</string>
+    <string name="led_mode">LED mode</string>
     
     <string name="hardware_version">Hardware Version</string>
     <string name="firmware_version">Firmware Version</string>
+    <string name="model_number">Model Number</string>
+    <string name="manufacturer_name">Manufacturer Name</string>
     
     <string name="unit_dbm">dBm</string>
     <string name="unit_distance">m</string>
@@ -40,6 +45,11 @@
     <string name="toast_password_change_failure">Changing password failed...</string>
     <string name="toast_multiple_property_success">Changing multiple properties succeeded...</string>
     <string name="toast_multiple_property_failure">Changing multiple properties failed...</string>    
+    
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
     
     <!-- Errors -->
     <string name="error_null_peripheral">Peripheral is null. Something is wrong.</string>
@@ -63,6 +73,7 @@
     <string name="change">Change</string>
     <string name="commit">Commit</string>
     
+    <!-- for LB2030 or lower --> 
     <string-array name="advertisement_time_interval">
         <item>0.2Hz</item>
         <item>0.3Hz</item>
@@ -74,7 +85,19 @@
         <item>15.0Hz</item>
         <item>20.0Hz</item>
     </string-array>
+    <!-- for LB3000 or compatible -->
+    <string-array name="advertisement_time_interval_for_nordic_based">
+        <item>0.1Hz</item>
+        <item>0.2Hz</item>
+        <item>0.5Hz</item>
+        <item>1.0Hz</item>
+        <item>2.0Hz</item>
+        <item>5.0Hz</item>
+        <item>10.0Hz</item>        
+        <item>20.0Hz</item>
+    </string-array>
     
+    <!-- for LB2030 or lower -->
     <string-array name="txpower">
         <item>-23dBm</item>
         <item>-19dBm</item>
@@ -85,6 +108,17 @@
         <item>0dBm</item>
         <item>4dBm</item>
     </string-array>
+    <!-- for LB3000 or compatible -->
+    <string-array name="txpower_for_nordic_based">
+        <item>-30dBm</item>
+        <item>-20dBm</item>
+        <item>-16dBm</item>
+        <item>-12dBm</item>
+        <item>-8dBm</item>
+        <item>-4dBm</item>
+        <item>0dBm</item>
+        <item>4dBm</item>
+    </string-array> 
     
     <string-array name="properties">
         <item>UUID</item>

@@ -1,7 +1,9 @@
 package com.wizturn.manager.dialog;
 
 import com.wizturn.sample.R;
+import com.wizturn.sdk.utils.DeviceInfoHelper;
 import com.wizturn.sdk.utils.TxPowerConverter;
+import com.wizturn.sdk.utils.TxPowerConverterForNordicBased;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -16,15 +18,23 @@ import android.widget.NumberPicker;
 public class DialogSettingTxPower extends DialogFragment {
 	private final String LOG_TAG = DialogSettingTxPower.class.getSimpleName();
 	public static final String FRAGMENT_TAG = "dialog_txpower";
+	private boolean isNordicBased = false;
 	
 	private OnClickListener listener;
 	private NumberPicker numberPicker;
 	
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
-		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		String[] values = null;
+		if(DeviceInfoHelper.isNordicModel(getArguments().getString("beacon_model"))) {
+			values = getResources().getStringArray(R.array.txpower_for_nordic_based);
+			isNordicBased = true;
+		} else {
+			values = getResources().getStringArray(R.array.txpower);
+			isNordicBased = false;
+		}
 		
-		String[] values = getResources().getStringArray(R.array.txpower);
+		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());		
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 		View view = inflater.inflate(R.layout.dialog_one_numberpicker, null);		
 		setNumberPicker(view, values);		
@@ -63,56 +73,36 @@ public class DialogSettingTxPower extends DialogFragment {
 				
 		int txpowerIndex = getArguments().getInt("txpower_index");
 		int value = -1;
-		switch(txpowerIndex) {
-			case -23:
-				value = 0;
-				break;
-			case -19:
-				value = 1;
-				break;
-			case -16:
-				value = 2;
-				break;
-			case -12:
-				value = 3;
-				break;
-			case -9:
-				value = 4;
-				break;
-			case -5:
-				value = 5;
-				break;
-			case 0:
-				value = 6;
-				break;
-			case 4:
-				value = 7;
-				break;
+		Log.d(LOG_TAG, "setNumberPicker() : txPowerIndex : " + txpowerIndex);
+		
+		if(isNordicBased) {
+			for(int i = 0; i < TxPowerConverterForNordicBased.TXPOWER_ARRAY.length; i++) {
+				if(TxPowerConverterForNordicBased.TXPOWER_ARRAY[i] == txpowerIndex) {
+					value = i;
+					break;
+				}
+			}
+		} else {
+			for(int i = 0; i < TxPowerConverter.TXPOWER_ARRAY.length; i++) {
+				if(TxPowerConverter.TXPOWER_ARRAY[i] == txpowerIndex) {
+					value = i;
+					break;
+				}
+			}
 		}
 		
 		numberPicker.setValue(value);
 	}
 	
 	private int getTxPowerFromIndexValue(int indexValue) {
-		switch(indexValue) {
-			case 0:	// -23dBm
-				return -23;				
-			case 1:	// -19dBm
-				return -19;
-			case 2:	// -16dBm
-				return -16;			
-			case 3:	// -12dBm
-				return -12;				
-			case 4:	// -9dBm
-				return -9;				
-			case 5:	// -5dBm
-				return -5;				
-			case 6:	// 0dBm
-				return 0;				
-			case 7:	// 4dBm
-				return 4;				
-			default:
-				return -1;
+		try {
+			if(isNordicBased) {
+				return TxPowerConverterForNordicBased.TXPOWER_ARRAY[indexValue];
+			} else {
+				return TxPowerConverter.TXPOWER_ARRAY[indexValue];
+			}	
+		} catch(Exception e) {
+			return -1;
 		}
 	}
 	
